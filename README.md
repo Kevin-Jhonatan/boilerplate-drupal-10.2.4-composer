@@ -4,7 +4,7 @@ This is a sample Drupal 10 with Composer installation pre-configured for use wit
 
 Features:
 
-- Drupal 10 Composer Project
+- Drupal 10.2.4 Composer Project
 - `fin init` [example](.docksal/commands/init)
 - Using the [default](.docksal/docksal.env#L9) Docksal LAMP stack with [image version pinning](.docksal/docksal.env#L13-L15)
 - PHP and MySQL settings overrides [examples](.docksal/etc)
@@ -22,8 +22,8 @@ Follow [Docksal environment setup instructions](https://docs.docksal.io/getting-
 1. Clone this repo into your Projects directory
 
     ```
-    git clone https://github.com/docksal/boilerplate-drupal10-composer.git drupal10
-    cd drupal10
+    git clone https://github.com/Kevin-Jhonatan/boilerplate-drupal-10.2.4-composer.git drupal10.2.4
+    cd drupal10.2.4
     ```
 
 2. Initialize the site
@@ -56,6 +56,28 @@ Some common tasks that can be handled by the init script (and other [custom comm
 - compile Sass
 - run DB updates, revert features, clear caches, etc.
 - enable/disable modules, update variables values
+
+
+## Port change :8080 to 8081 
+If you want to change the default port :8080 but you have apache LAMP and do not want to turn off you can change the port with the following command we will use the port :8081
+
+Documentation => https://blog.docksal.io/how-to-override-default-http-and-https-ports-in-docksal-f4d5a96fced4
+
+- Command using `fin`.
+```
+fin config set --global DOCKSAL_VHOST_PROXY_PORT_HTTP=8081
+```
+```
+fin system reset
+```
+
+## Additional changes
+- Command using `nano .docksal/commands/init-site` add port :8081
+```
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC}:8081 in your browser to verify the setup."
+```
+## Optional MySQL port changes
+- Command using `nano .docksal/docksal.env` change port `MYSQL_PORT_MAPPING='0:3307'`
 
 
 ## Security notice
