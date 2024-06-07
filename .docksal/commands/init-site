@@ -80,7 +80,7 @@ site_install ()
 	cd "$DOCROOT_PATH"
 
 	echo-green "Installing Drupal..."
-	drush site-install standard -y --site-name='My Drupal 10.2.5 Site'
+	drush site-install standard -y --site-name='My Drupal 10.2.7 Site'
 }
 
 #-------------------------- END: Functions --------------------------------

@@ -3,9 +3,9 @@
 This is a sample Drupal 10 with Composer installation pre-configured for use with Docksal.
 ## Features:
 
-- Drupal 10.2.5 Composer Project
-- Drush 12.4.4.0
-- PHP 8.18
+- Drupal 10.2.7 Composer Project
+- Drush 12.5.2.0
+- PHP 8.1.8
 - `fin init` [example](.docksal/commands/init)
 - Using the [default](.docksal/docksal.env#L9) Docksal LAMP stack with [image version pinning](.docksal/docksal.env#L13-L15)
 - PHP and MySQL settings overrides [examples](.docksal/etc)
