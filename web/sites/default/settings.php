@@ -813,7 +813,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-$databases['default']['default'] = array (
+$databases['default']['default'] = array(
   'database' => 'default',
   'username' => 'user',
   'password' => 'user',
@@ -825,4 +825,5 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_MJnp46jbLz3dKuJyzTcCLPRSITuR0pHeVvTy5KtcnoT4YnQLTEyiZOe6zp0Y287M3jd75TnQDA/sync';
+
+$settings['config_sync_directory'] = '../config/sync';
